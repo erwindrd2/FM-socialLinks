@@ -1,0 +1,151 @@
+@layer css_reset {
+    /* css reset */
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+    
+        * {
+            margin: 0;
+        }
+    
+        img,
+        picture,
+        video,
+        canvas,
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+    
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            overflow-wrap: break-word;
+        }
+    
+        p {
+            text-wrap: pretty;
+        }
+    
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-wrap: balance;
+        }
+}
+
+@layer colors {
+    :root {
+    --color-dark-grey: hsl(0, 0%, 8%);
+    --color-medium-grey: hsl(0, 0%, 12%);
+    --color-light-grey: hsl(0, 0%, 20%);
+    --color-green: hsl(75, 94%, 57%);
+    --color-white: hsl(0, 0%, 100%);
+    }
+
+}
+
+@layer fonts { 
+    
+    /* inter-regular - latin */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        src: url('/fontsinter-v18-latin-regular.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* inter-700 - latin */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        src: url('/fontsinter-v18-latin-700.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+}
+
+@layer Typography {
+
+    .textpreset1 {
+        font-family: inter, sans-serif;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 150%;
+        letter-spacing: 0px;
+    }
+
+    .textpreset2 {
+        font-family: inter, sans-serif;
+        font-weight: normal;
+        font-size: 0.875rem;
+        line-height: 150%;
+        letter-spacing: 0px;
+    }
+
+    .textpreset3 {
+        font-family: inter, sans-serif;
+        font-weight: bold;
+        font-size: 0.875rem;
+        line-height: 150%;
+        letter-spacing: 0px;
+    }
+}
+
+@layer spacing {
+
+    :root {
+        --spacing-xxs: 0.25rem; /* 4px */
+        --spacing-xs: 0.5rem; /* 8px */
+        --spacing-s: 0.75rem; /* 12px */
+        --spacing-m: 1rem; /* 16px */
+        --spacing-l: 1.5rem; /* 24px */
+        --spacing-xl: 2.5rem; /* 40px */
+    }
+}
+
+body {
+    background-color: var(--color-dark-grey);
+}
+
+.wrapper {
+    display: grid;
+    width: 327px;
+    height: 579px;
+    border-radius: 12px;
+    background-color: var(--color-medium-grey);
+    margin: auto auto;
+    margin-block-start: 117px;
+    justify-items: center;
+    padding-top: var(--spacing-l);
+    padding-bottom: var(--spacing-l)
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 88px;
+    height:auto;
+    margin-bottom: var(--spacing-l);
+}
+
+
+.location {
+    color: var(--color-green);
+}
+
+.about, .socials, .name {
+    color: var(--color-white);
+}
