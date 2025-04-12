@@ -62,7 +62,7 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
-        src: url('/fontsinter-v18-latin-regular.woff2') format('woff2');
+        src: url('/fonts/inter-v18-latin-regular.woff2') format('woff2');
         /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
 
@@ -73,7 +73,7 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
-        src: url('/fontsinter-v18-latin-700.woff2') format('woff2');
+        src: url('/fonts/inter-v18-latin-700.woff2') format('woff2');
         /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
 }
@@ -122,16 +122,16 @@ body {
 }
 
 .wrapper {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     width: 327px;
-    height: 579px;
     border-radius: 12px;
     background-color: var(--color-medium-grey);
     margin: auto auto;
     margin-block-start: 117px;
-    justify-items: center;
-    padding-top: var(--spacing-l);
-    padding-bottom: var(--spacing-l)
+   align-items: center;
+    padding: var(--spacing-l);
+    
 }
 
 .avatar {
@@ -139,8 +139,8 @@ body {
     width: 88px;
     height:auto;
     margin-bottom: var(--spacing-l);
+    
 }
-
 
 .location {
     color: var(--color-green);
@@ -148,4 +148,52 @@ body {
 
 .about, .socials, .name {
     color: var(--color-white);
+}
+
+.name {
+    margin-bottom: var(--spacing-xxs);
+
+}
+.location {
+    margin-bottom: var(--spacing-l);
+}
+.about {
+    margin-bottom: var(--spacing-l);
+}
+
+.socials {
+    display: grid;
+    gap: var(--spacing-m);
+    width: 100%;
+    cursor: pointer;
+    
+
+    p {  
+        background-color: var(--color-light-grey);
+        border-radius: 8px;
+        padding: var(--spacing-s);
+    
+        text-align: center;
+    }
+    
+    p:hover {
+        background-color: var(--color-green);
+        color: var(--color-dark-grey);
+    }
+}
+
+.attribution {
+
+    margin-top: var(--spacing-xl);
+    text-align: center;
+    color: var(--color-white);
+
+    a {
+        color: var(--color-green);
+        text-decoration: none;
+    }
+
+    a:hover {
+        border: 1px var(--color-green) solid;
+    }
 }
